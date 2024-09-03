@@ -1,0 +1,152 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #343a40;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #343a40;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+
+
+/* #sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+} */
+
+/* a[data-toggle="collapse"] {
+  position: relative;
+} */
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+  content: '\e260';
+}
+
+#content2 {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 20px;
+  border-radius: 10px 10px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-body {
+  background: #fff;
+  border-radius: 10px 10px 10px 10px;
+  padding: 20px;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.list-group-item img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.table thead th {
+  border-bottom: 2px solid #eee;
+}
+
+.table tbody td {
+  border-top: none;
+}
+
+#stickyNavbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-nav.ml-auto {
+  margin-left: auto;
+}
+
+
+/* Đổi màu nền thành màu xám trong suốt khi hover */
+#sidebar ul.components li a.nav-link:hover {
+  background-color: rgba(128, 128, 128, 0.5); /* Màu xám với độ trong suốt 50% */
+  color: #fff; /* Màu chữ vẫn là màu trắng */
+}
+
+/* Đổi màu nền thành màu xám trong suốt cho các dropdown khi hover */
+#sidebar ul ul li a.nav-link:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  color: #fff;
+}
+/* ------------------------ */
+.nav-link.d-flex.justify-content-between {
+  justify-content: flex-start !important;
+}
+
+.nav-link i:first-child {
+  margin-right: 8px; /* Khoảng cách giữa icon và chữ */
+}
+
+.nav-link i:last-child {
+  margin-left: auto; /* Đẩy icon chevron về phía cuối */
+}
+
